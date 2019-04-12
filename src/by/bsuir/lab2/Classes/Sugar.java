@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
-public class Sugar extends Thing {
+public class Sugar extends LooseItem {
 	private Constancts con;
 	private Cup cup;
 		

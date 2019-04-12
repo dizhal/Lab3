@@ -13,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
 
-public class Coffee extends Thing{
+public class Coffee extends LooseItem{
 	private StringBuffer coffeeTaste;
 	private Cup cup;
 	private Constancts con;
@@ -27,10 +27,9 @@ public class Coffee extends Thing{
 		ab.btnSelect(root,this);
 	}
 	
-	public void spreadOn(BorderPane root, ActionButton ab) {
-		
+	public void spreadOn(BorderPane root, ActionButton ab) {		
 		weight=ab.btnSpreadOnCoffee(root,coffeeTaste);
-		double temp=weight*con.DENCITY_SUGAR;
+		double temp=weight*con.DENCITY_COFFEE;
 		cup.setVolume(temp);
 	}
 	
