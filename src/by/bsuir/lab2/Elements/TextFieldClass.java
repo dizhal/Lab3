@@ -8,6 +8,8 @@ public class TextFieldClass {
 	public TextField weightSugar;
 	
 	public TextField weightCoffee;
+	public TextField weightTea;
+	public TextField weightMilk;
 	
 	public TextField enterWater;
 	public TextField enterTemperature;
@@ -15,6 +17,8 @@ public class TextFieldClass {
 	public TextFieldClass() {
 		nameStudent=new TextField();
 		weightCoffee=new TextField();
+		weightTea=new TextField();
+		weightMilk=new TextField();
 		weightSugar=new TextField();
 		enterWater=new TextField();
 		enterTemperature=new TextField();

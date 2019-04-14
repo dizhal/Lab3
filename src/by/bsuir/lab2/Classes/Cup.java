@@ -1,19 +1,12 @@
 package by.bsuir.lab2.Classes;
 
 import by.bsuir.lab2.Control.ActionButton;
-import by.bsuir.lab2.Elements.Constancts;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
 
 public class Cup extends Thing{
 	private double volume;
 	private String content;
-	private Constancts con;
+	private static int flag=0;
 	
 	public Cup() {
 		volume=0;
@@ -25,13 +18,31 @@ public class Cup extends Thing{
 		content=contentTemp;
 		switch(content) {
 		case "сахар": ab.btnToFillSugar(root); break;
-		case "кофе": ab.btnToFillCoffee(root); break;
-		case "вода": ab.btnToFillWater2(root); break;					
+		case "вода": ab.btnToFillWater2(root); break;	
+		case "молоко": ab.btnToFillMilk(root); break;
+		default: ab.btnToFill(root); break;
 		}		
+	}
+	
+	public void toAccept(BorderPane root, ActionButton ab,String content,StringBuffer tempFunction) {
+		
+		switch(content) {
+		case "сахар": ab.btnToAcceptSugar(root,tempFunction,this); break;
+		case "молоко": ab.btnToAcceptMilk(root); break;
+		default:ab.btnToAccept(root,this);
+		}
 	}
 	
 	public void setVolume(double temp) {
 		volume=temp;
+	}
+	
+	public void setFlag(int temp) {
+		flag=temp;
+	}
+	
+	public int getFlag() {
+		return flag;
 	}
 
 }

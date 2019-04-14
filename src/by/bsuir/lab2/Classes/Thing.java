@@ -1,8 +1,6 @@
 package by.bsuir.lab2.Classes;
 
-import javafx.scene.layout.GridPane;
-
-public class Thing {
+public abstract class Thing {
 	
 	protected Integer weight;
 	
@@ -10,5 +8,12 @@ public class Thing {
 		weight=0;
 	}
 	
+	public void setWeight(Integer temp) {
+		weight=temp;
+	}
+	
+	public Integer getWeight() {
+		return weight;
+	}
 }
 

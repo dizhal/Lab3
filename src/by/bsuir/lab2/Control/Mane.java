@@ -7,7 +7,6 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 
 public class Mane extends Application {
 	
@@ -31,9 +30,10 @@ public class Mane extends Application {
         ab.btnEnter(root, nameStudent);
        
         stud=new Student(nameStudent);
-        stud.makeCoffee(root,ab);
         
-        
+        stud.selectFunction(root,ab);
+        stud.spreadOnIntoCup(root,ab,stud.getFunction());
+              
     	primaryStage.setScene(scene);	
         primaryStage.setTitle(con.NAME_TITLE);        
         primaryStage.show();		
